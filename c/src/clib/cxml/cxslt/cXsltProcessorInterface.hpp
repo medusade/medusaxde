@@ -48,8 +48,7 @@ class c_INSTANCE_CLASS cXsltProcessorImplemented;
 //  Author: $author$
 //    Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
-typedef cInterfaceBase
-cXsltProcessorInterfaceImplements;
+typedef cInterfaceBase cXsltProcessorInterfaceImplements;
 ///////////////////////////////////////////////////////////////////////
 //  Class: cXsltProcessorInterface
 //
@@ -81,8 +80,7 @@ public:
 //  Author: $author$
 //    Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
-typedef cImplementBase
-cXsltProcessorImplementImplements;
+typedef cXsltProcessorInterface cXsltProcessorImplementImplements;
 ///////////////////////////////////////////////////////////////////////
 //  Class: cXsltProcessorImplement
 //
@@ -90,11 +88,9 @@ cXsltProcessorImplementImplements;
 //   Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
 class c_IMPLEMENT_CLASS cXsltProcessorImplement
-: virtual public cXsltProcessorInterface,
-  virtual public cXsltProcessorImplementImplements
+: virtual public cXsltProcessorImplementImplements
 {
 public:
-    //typedef cXsltProcessorInterface cImplements;
     typedef cXsltProcessorImplementImplements cImplements;
 #else // !defined(CXSLTPROCESSORIMPLEMENT_MEMBERS_ONLY) 
 #endif // !defined(CXSLTPROCESSORIMPLEMENT_MEMBERS_ONLY) 

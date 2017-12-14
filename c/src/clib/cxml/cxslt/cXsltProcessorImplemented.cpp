@@ -37,10 +37,14 @@ namespace c_NAMESPACE {
 //    Author: $author$
 //      Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
-cXsltProcessorInterface* cXsltProcessorInterface::GetInstance
-(eError& error)
+cXsltProcessorInterface* cXsltProcessorInterface::GetInstance(eError& error)
 {
-    cXsltProcessorImplemented* instance = new cXsltProcessorImplemented();
+    cXsltProcessorImplemented* instance = 0;
+    if ((instance = new cXsltProcessorImplemented())) {
+        error = e_ERROR_NONE;
+    } else {
+        error = e_ERROR_NEW;
+    }
     return instance;
 }
 ///////////////////////////////////////////////////////////////////////
@@ -49,15 +53,16 @@ cXsltProcessorInterface* cXsltProcessorInterface::GetInstance
 //    Author: $author$
 //      Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
-eError cXsltProcessorInterface::FreeInstance
-(cXsltProcessorInterface* instance)
+eError cXsltProcessorInterface::FreeInstance(cXsltProcessorInterface* instance)
 {
     eError error = e_ERROR_FAILED;
     if ((instance))
     {
-        cXsltProcessorImplemented* implemented = &instance->Implemented();
-        delete implemented;
-        error = e_ERROR_NONE;
+        cXsltProcessorImplemented* implemented = 0;
+        if ((implemented = &instance->Implemented())) {
+            delete implemented;
+            error = e_ERROR_NONE;
+        }
     }
     return error;
 }

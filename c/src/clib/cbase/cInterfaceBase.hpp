@@ -24,7 +24,7 @@
 #endif // !defined(_CINTERFACEBASE_HPP) && !defined(CINTERFACEBASE_MEMBERS_ONLY) 
 
 #if !defined(CINTERFACEBASE_MEMBERS_ONLY)
-#include "cError.hpp"
+#include "cBase.hpp"
 
 #if defined(c_NAMESPACE)
 namespace c_NAMESPACE {
@@ -39,12 +39,20 @@ namespace c_NAMESPACE {
 class c_INTERFACE_CLASS cInterfaceBase
 {
 public:
+    ///////////////////////////////////////////////////////////////////////
+    // Destructor: ~cInterfaceBase
+    //
+    //     Author: $author$
+    //       Date: 12/13/2017
+    ///////////////////////////////////////////////////////////////////////
+    virtual ~cInterfaceBase() 
+    {   
+    }
 #else // !defined(CINTERFACEBASE_MEMBERS_ONLY) 
 #endif // !defined(CINTERFACEBASE_MEMBERS_ONLY) 
 
 #if !defined(CINTERFACEBASE_MEMBERS_ONLY)
 };
-
 
 #if defined(c_NAMESPACE)
 }

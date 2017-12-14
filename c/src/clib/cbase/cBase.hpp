@@ -25,7 +25,7 @@
 
 #if !defined(CBASE_MEMBERS_ONLY)
 
-#include "cplatform.hpp"
+#include "cError.hpp"
 
 #if defined(c_NAMESPACE)
 namespace c_NAMESPACE {
@@ -45,7 +45,6 @@ public:
 
 #if !defined(CBASE_MEMBERS_ONLY)
 };
-
 
 #if defined(c_NAMESPACE)
 }
