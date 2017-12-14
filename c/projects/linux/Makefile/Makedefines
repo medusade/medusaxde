@@ -31,8 +31,16 @@ else
 DBGFLAGS = _RELEASE
 endif
 
+ifndef UNAME
+UNAME = $(shell uname)
+endif
+
+ifndef OS
+OS = linux
+endif
+
 ifndef BLD
-BLD = build/linux
+BLD = build/$(OS)
 endif
 
 PKGROOT		=	$(PKG)
@@ -106,8 +114,12 @@ RM			=	rm -f
 MKDIR		=	mkdir -p
 D2U		    =	dos2unix
 
+ifneq ($(UNAME), Darwin)
+XLDFLAGS	= -Xlinker -R$(LIBDIR) 
+endif
+
 DSOFLAGS	= -Wl,-soname,$@ -shared $(USRDSOFLAGS)
-LDFLAGS		= -Xlinker -R$(LIBDIR) -L$(LIBDIR) $(USRLIBDIRS) $(USRLDFLAGS) $(OPTIM) $(CXXOPTIM)
+LDFLAGS		= $(XLDFLAGS) -L$(LIBDIR) $(USRLIBDIRS) $(USRLDFLAGS) $(OPTIM) $(CXXOPTIM)
 ARFLAGS		=
 
 OPTIONS := $(shell if [ "$(BUILD_TYPE)" = "debug" ] ; then echo -g; fi)

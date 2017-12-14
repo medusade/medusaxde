@@ -115,10 +115,10 @@ LIBS = \
 -lxslt \
 -lexslt \
 -lxml2 \
+-lz \
 -lpthread \
 -ldl \
 -lrt \
--lz \
 
 #
 # Executable depends

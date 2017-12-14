@@ -21,7 +21,7 @@
 # Linux Makefile for MedusaXde libraries
 ########################################################################
 
-PKG = $(PWD)/../../../..
+PKG = ../../../..
 
 BLD = build/linux
 PRJ = projects/linux/Makefile

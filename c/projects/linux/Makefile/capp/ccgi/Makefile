@@ -21,7 +21,7 @@
 # Linux Makefile for MedusaXde CGI Applications
 ########################################################################
 
-PKG = $(PWD)/../../../../..
+PKG = ../../../../..
 
 BLD = build/linux
 PRJ = projects/linux/Makefile
@@ -32,6 +32,8 @@ include $(PKG)/$(PRJ)/Makedefines
 SRC_DIRS = \
 $(PKG)/$(PRJ)/capp/ccgi/ccgicc \
 $(PKG)/$(PRJ)/capp/ccgi/clibxsltcgi \
+
+old_SRC_DIRS = \
 $(PKG)/$(PRJ)/capp/ccgi/cvcprojxsltcgi \
 $(PKG)/$(PRJ)/capp/ccgi/cvspropsxsltcgi \
 

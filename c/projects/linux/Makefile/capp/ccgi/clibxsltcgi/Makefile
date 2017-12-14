@@ -87,10 +87,10 @@ LIBS = \
 -lexslt \
 -lxml2 \
 -lcgicc \
+-lz \
 -lpthread \
 -ldl \
 -lrt \
--lz \
 
 #
 # Executable depends
