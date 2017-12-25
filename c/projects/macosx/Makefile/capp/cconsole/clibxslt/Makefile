@@ -120,7 +120,6 @@ LIBS = \
 -lxml2 \
 -lpthread \
 -ldl \
--lz \
 
 #
 # Executable depends
