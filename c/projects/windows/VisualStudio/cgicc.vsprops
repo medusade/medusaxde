@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!--========================================================================-->
+<!-- Copyright (c) 1988-2018 $organization$                                 -->
+<!--                                                                        -->
+<!-- This software is provided by the author and contributors ``as is''     -->
+<!-- and any express or implied warranties, including, but not limited to,  -->
+<!-- the implied warranties of merchantability and fitness for a particular -->
+<!-- purpose are disclaimed. In no event shall the author or contributors   -->
+<!-- be liable for any direct, indirect, incidental, special, exemplary,    -->
+<!-- or consequential damages (including, but not limited to, procurement   -->
+<!-- of substitute goods or services; loss of use, data, or profits; or     -->
+<!-- business interruption) however caused and on any theory of liability,  -->
+<!-- whether in contract, strict liability, or tort (including negligence   -->
+<!-- or otherwise) arising in any way out of the use of this software,      -->
+<!-- even if advised of the possibility of such damage.                     -->
+<!--                                                                        -->
+<!--   File: cgicc.vsprops                                                  -->
+<!--                                                                        -->
+<!-- Author: $author$                                                       -->
+<!--   Date: 12/6/2018                                                      -->
+<!--========================================================================-->
+<VisualStudioPropertySheet
+    ProjectType="Visual C++"
+    Version="8.00"
+    Name="cgicc">
+
+    <!--===============================================-->
+
+    <UserMacro
+        Name="CGICC_GROUP"
+        Value="thirdparty/cgicc/"
+    />
+    <UserMacro
+        Name="CGICC_NAME"
+        Value="cgicc"
+    />
+    <UserMacro
+        Name="CGICC_VERSION"
+        Value="-3.2.9"
+    />
+
+    <!--===============================================-->
+
+    <UserMacro
+        Name="CGICC_DIR"
+        Value="$(CGICC_GROUP)$(CGICC_NAME)$(CGICC_VERSION)"
+    />
+    <UserMacro
+        Name="CGICC_SOURCE_DIR"
+        Value="$(SOURCE_ROOT_DIR)/$(CGICC_DIR)"
+    />
+    <UserMacro
+        Name="CGICC_BUILD_DIR"
+        Value="$(SOURCE_BUILD_DIR)/$(CGICC_DIR)/build"
+    />
+
+    <!--===============================================-->
+
+    <UserMacro
+        Name="CGICC_BUILD"
+        Value="$(CGICC_BUILD_DIR)/$(PlatformName)/$(VCVersion)/$(ConfigurationName)"
+    />
+    <UserMacro
+        Name="CGICC_OBJ"
+        Value="$(CGICC_BUILD)/obj/$(ProjectName)"
+    />
+    <UserMacro
+        Name="CGICC_LIB"
+        Value="$(CGICC_BUILD)/lib"
+    />
+    <UserMacro
+        Name="CGICC_BIN"
+        Value="$(CGICC_BUILD)/bin"
+    />
+
+    <!--===============================================-->
+
+    <UserMacro
+        Name="CGICC_DEFINES"
+        Value=""
+    />
+    <UserMacro
+        Name="CGICC_DEBUG_DEFINES"
+        Value="$(CGICC_DEFINES);$(DEPENDS_DEBUG_DEFINES)"
+    />
+    <UserMacro
+        Name="CGICC_RELEASE_DEFINES"
+        Value="$(CGICC_DEFINES);$(DEPENDS_RELEASE_DEFINES)"
+    />
+
+    <!--===============================================-->
+  
+    <UserMacro
+        Name="CGICC_INCLUDE_DIRS"
+        Value="$(CGICC_SOURCE_DIR);$(DEPENDS_INCLUDE_DIRS)"
+    />
+    <UserMacro
+        Name="CGICC_LIB_DIRS"
+        Value="$(CGICC_LIB);$(DEPENDS_LIB_DIRS)"
+    />
+    <UserMacro
+        Name="CGICC_LIBS"
+        Value="libcgicc.lib $(DEPENDS_LIBS)"
+    />
+
+    <!--===============================================-->
+
+</VisualStudioPropertySheet>

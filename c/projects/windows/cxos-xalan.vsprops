@@ -26,11 +26,11 @@
 	/>
     <UserMacro
 		Name="XALAN_SOURCE_DIR"
-		Value="$(THIRDPARTY_DIR)/$(XALAN_DIR)"
+		Value="$(XALAN_DIR)"
 	/>
     <UserMacro
 		Name="XALAN_BUILD_DIR"
-		Value="$(THIRDPARTY_DIR)/$(XALAN_DIR)"
+		Value="$(XALAN_DIR)"
 	/>
 
     <UserMacro

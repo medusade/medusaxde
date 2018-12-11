@@ -9,7 +9,7 @@
 
     <UserMacro
 		Name="CGICC_GROUP"
-		Value="cgicc"
+		Value="libc/cgicc/"
 	/>
     <UserMacro
 		Name="CGICC_NAME"
@@ -17,19 +17,19 @@
 	/>
     <UserMacro
 		Name="CGICC_VERSION"
-		Value="3.2.9"
+		Value="-3.2.9"
 	/>
     <UserMacro
 		Name="CGICC_DIR"
-		Value="$(CGICC_GROUP)/$(CGICC_NAME)-$(CGICC_VERSION)"
+		Value="$(CGICC_GROUP)$(CGICC_NAME)$(CGICC_VERSION)"
 	/>
     <UserMacro
 		Name="CGICC_SOURCE_DIR"
-		Value="$(THIRDPARTY_DIR)/$(CGICC_DIR)"
+		Value="$(MXDE_ROOT_DIR)/$(CGICC_DIR)"
 	/>
     <UserMacro
 		Name="CGICC_BUILD_DIR"
-		Value="$(THIRDPARTY_DIR)/$(CGICC_DIR)"
+		Value="$(MXDE_ROOT_DIR)/$(CGICC_DIR)"
 	/>
 
     <UserMacro

@@ -27,11 +27,6 @@
 		Value="../../../../../.."
 	/>
 
-    <UserMacro
-		Name="THIRDPARTY_DIR"
-		Value="$(MXDE_ROOT_DIR)/thirdparty"
-	/>
-
     <!--===============================================-->
     
     <UserMacro

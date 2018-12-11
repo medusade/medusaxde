@@ -26,11 +26,11 @@
 	/>
     <UserMacro
 		Name="XERCES_SOURCE_DIR"
-		Value="$(THIRDPARTY_DIR)/$(XERCES_DIR)"
+		Value="$(XERCES_DIR)"
 	/>
     <UserMacro
 		Name="XERCES_BUILD_DIR"
-		Value="$(THIRDPARTY_DIR)/$(XERCES_DIR)"
+		Value="$(XERCES_DIR)"
 	/>
 
     <UserMacro
