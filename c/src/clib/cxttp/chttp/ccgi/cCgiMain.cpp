@@ -31,7 +31,6 @@ namespace c_NAMESPACE {
 // Author: $author$
 //   Date: 11/21/2012
 ///////////////////////////////////////////////////////////////////////
-static cCgiMain* g_theCgiMain = 0;
 
 ///////////////////////////////////////////////////////////////////////
 //  Function: cCgiMain::SetTheCgiMain
@@ -40,7 +39,7 @@ static cCgiMain* g_theCgiMain = 0;
 //      Date: 11/21/2012
 ///////////////////////////////////////////////////////////////////////
 cCgiMain* cCgiMain::SetTheCgiMain(cCgiMain* theCgiMain) {
-    return g_theCgiMain = theCgiMain;
+    return TheCgiMain() = theCgiMain;
 }
 ///////////////////////////////////////////////////////////////////////
 //  Function: cCgiMain::GetTheCgiMain
@@ -49,8 +48,21 @@ cCgiMain* cCgiMain::SetTheCgiMain(cCgiMain* theCgiMain) {
 //      Date: 11/21/2012
 ///////////////////////////////////////////////////////////////////////
 cCgiMain* cCgiMain::GetTheCgiMain() {
-    return g_theCgiMain;
+    return TheCgiMain();
 }
+
+#if !defined(WINDOWS) || !defined(_LIB)
+///////////////////////////////////////////////////////////////////////
+//  Function: cCgiMain::TheCgiMain
+//
+//    Author: $author$
+//      Date: 12/9/2018
+///////////////////////////////////////////////////////////////////////
+cCgiMain*& cCgiMain::TheCgiMain() {
+    static cCgiMain* theCgiMain = 0;
+    return theCgiMain;
+}
+#endif // !defined(WINDOWS) || !defined(_LIB)
 
 #if defined(c_NAMESPACE)
 }

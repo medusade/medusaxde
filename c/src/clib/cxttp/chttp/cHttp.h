@@ -26,7 +26,11 @@
 #include "cXttp.h"
 
 #if !defined(CHTTP_EXPORT)
+#if !defined(CHTTP_NO_EXPORT)
 #define CHTTP_EXPORT c_IMPORT
+#else /* !defined(CHTTP_NO_EXPORT) */
+#define CHTTP_EXPORT
+#endif /* !defined(CHTTP_NO_EXPORT) */
 #endif /* !defined(CHTTP_EXPORT) */
 
 #define c_HTTP_NEWLINE  \

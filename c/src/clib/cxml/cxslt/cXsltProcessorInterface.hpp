@@ -80,7 +80,8 @@ public:
 //  Author: $author$
 //    Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
-typedef cXsltProcessorInterface cXsltProcessorImplementImplements;
+typedef cImplementBase
+cXsltProcessorImplementImplements;
 ///////////////////////////////////////////////////////////////////////
 //  Class: cXsltProcessorImplement
 //
@@ -88,9 +89,11 @@ typedef cXsltProcessorInterface cXsltProcessorImplementImplements;
 //   Date: 7/1/2011
 ///////////////////////////////////////////////////////////////////////
 class c_IMPLEMENT_CLASS cXsltProcessorImplement
-: virtual public cXsltProcessorImplementImplements
+: virtual public cXsltProcessorInterface,
+  virtual public cXsltProcessorImplementImplements
 {
 public:
+    //typedef cXsltProcessorInterface cImplements;
     typedef cXsltProcessorImplementImplements cImplements;
 #else // !defined(CXSLTPROCESSORIMPLEMENT_MEMBERS_ONLY) 
 #endif // !defined(CXSLTPROCESSORIMPLEMENT_MEMBERS_ONLY) 

@@ -24,13 +24,28 @@
 namespace c_NAMESPACE {
 #endif // defined(c_NAMESPACE) 
 
+#if !defined(CCGICGIMAIN_NO_INSTANCE)
 ///////////////////////////////////////////////////////////////////////
 //  Class: cCgiCgiMain
 //
 // Author: $author$
 //   Date: 11/23/2012
 ///////////////////////////////////////////////////////////////////////
-cCgiCgiMain g_theCgiMain;
+static cCgiCgiMain g_theCgiCgiMain;
+
+#if defined(WINDOWS) && defined(_LIB)
+///////////////////////////////////////////////////////////////////////
+//  Function: cCgiMain::TheCgiMain
+//
+//    Author: $author$
+//      Date: 12/9/2018
+///////////////////////////////////////////////////////////////////////
+cCgiMain*& cCgiMain::TheCgiMain() {
+    static cCgiMain* theCgiMain = 0;
+    return theCgiMain;
+}
+#endif // defined(WINDOWS) && defined(_LIB)
+#endif // !defined(CCGICGIMAIN_NO_INSTANCE)
 
 #if defined(c_NAMESPACE)
 }

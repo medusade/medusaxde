@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////
-// Copyright (c) 1988-2011 $organization$
+// Copyright (c) 1988-2018 $organization$
 //
 // This software is provided by the author and contributors ``as is'' 
 // and any express or implied warranties, including, but not limited to, 
@@ -13,44 +13,38 @@
 // or otherwise) arising in any way out of the use of this software, 
 // even if advised of the possibility of such damage.
 //
-//   File: cInterfaceBase.hpp
+//   File: cCgiCgiMainInstance.cpp
 //
 // Author: $author$
-//   Date: 3/13/2011
+//   Date: 12/9/2018
 ///////////////////////////////////////////////////////////////////////
-#if !defined(_CINTERFACEBASE_HPP) || defined(CINTERFACEBASE_MEMBERS_ONLY)
-#if !defined(_CINTERFACEBASE_HPP) && !defined(CINTERFACEBASE_MEMBERS_ONLY)
-#define _CINTERFACEBASE_HPP
-#endif // !defined(_CINTERFACEBASE_HPP) && !defined(CINTERFACEBASE_MEMBERS_ONLY) 
-
-#if !defined(CINTERFACEBASE_MEMBERS_ONLY)
-#include "cError.hpp"
+#include "cCgiCgiMain.hpp"
 
 #if defined(c_NAMESPACE)
 namespace c_NAMESPACE {
 #endif // defined(c_NAMESPACE) 
 
 ///////////////////////////////////////////////////////////////////////
-//  Class: cInterfaceBase
+//  Class: cCgiCgiMain
 //
 // Author: $author$
-//   Date: 3/13/2011
+//   Date: 11/23/2012
 ///////////////////////////////////////////////////////////////////////
-class c_INTERFACE_CLASS cInterfaceBase
-{
-public:
-#else // !defined(CINTERFACEBASE_MEMBERS_ONLY) 
-#endif // !defined(CINTERFACEBASE_MEMBERS_ONLY) 
+static cCgiCgiMain g_theCgiCgiMain;
 
-#if !defined(CINTERFACEBASE_MEMBERS_ONLY)
-};
-
+#if defined(WINDOWS) && defined(_LIB)
+///////////////////////////////////////////////////////////////////////
+//  Function: cCgiMain::TheCgiMain
+//
+//    Author: $author$
+//      Date: 12/9/2018
+///////////////////////////////////////////////////////////////////////
+cCgiMain*& cCgiMain::TheCgiMain() {
+    static cCgiMain* theCgiMain = 0;
+    return theCgiMain;
+}
+#endif // defined(WINDOWS) && defined(_LIB)
 
 #if defined(c_NAMESPACE)
 }
 #endif // defined(c_NAMESPACE) 
-
-#else // !defined(CINTERFACEBASE_MEMBERS_ONLY) 
-#endif // !defined(CINTERFACEBASE_MEMBERS_ONLY) 
-
-#endif // !defined(_CINTERFACEBASE_HPP) || defined(CINTERFACEBASE_MEMBERS_ONLY) 

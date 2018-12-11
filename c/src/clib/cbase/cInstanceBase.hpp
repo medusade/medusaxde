@@ -24,7 +24,7 @@
 #endif // !defined(_CINSTANCEBASE_HPP) && !defined(CINSTANCEBASE_MEMBERS_ONLY) 
 
 #if !defined(CINSTANCEBASE_MEMBERS_ONLY)
-#include "cImplementBase.hpp"
+#include "cError.hpp"
 
 #if defined(c_NAMESPACE)
 namespace c_NAMESPACE {
@@ -37,33 +37,14 @@ namespace c_NAMESPACE {
 //   Date: 3/19/2011
 ///////////////////////////////////////////////////////////////////////
 class c_INSTANCE_CLASS cInstanceBase
-: virtual public cImplementBase
 {
 public:
-    typedef cImplementBase cImplements;
-    ///////////////////////////////////////////////////////////////////////
-    // Constructor: cInstanceBase
-    //
-    //      Author: $author$
-    //        Date: 12/13/2017
-    ///////////////////////////////////////////////////////////////////////
-    cInstanceBase()
-    {
-    }
-    ///////////////////////////////////////////////////////////////////////
-    // Destructor: ~cInstanceBase
-    //
-    //     Author: $author$
-    //       Date: 12/13/2017
-    ///////////////////////////////////////////////////////////////////////
-    virtual ~cInstanceBase()
-    {
-    }
 #else // !defined(CINSTANCEBASE_MEMBERS_ONLY) 
 #endif // !defined(CINSTANCEBASE_MEMBERS_ONLY) 
 
 #if !defined(CINSTANCEBASE_MEMBERS_ONLY)
 };
+
 
 #if defined(c_NAMESPACE)
 }

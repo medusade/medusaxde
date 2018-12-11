@@ -58,11 +58,9 @@ eError cXsltProcessorInterface::FreeInstance(cXsltProcessorInterface* instance)
     eError error = e_ERROR_FAILED;
     if ((instance))
     {
-        cXsltProcessorImplemented* implemented = 0;
-        if ((implemented = &instance->Implemented())) {
-            delete implemented;
-            error = e_ERROR_NONE;
-        }
+        cXsltProcessorImplemented* implemented = &instance->Implemented();
+        delete implemented;
+        error = e_ERROR_NONE;
     }
     return error;
 }

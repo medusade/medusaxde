@@ -24,7 +24,7 @@
 #endif // !defined(_CIMPLEMENTBASE_HPP) && !defined(CIMPLEMENTBASE_MEMBERS_ONLY) 
 
 #if !defined(CIMPLEMENTBASE_MEMBERS_ONLY)
-#include "cInterfaceBase.hpp"
+#include "cError.hpp"
 
 #if defined(c_NAMESPACE)
 namespace c_NAMESPACE {
@@ -37,10 +37,8 @@ namespace c_NAMESPACE {
 //   Date: 3/19/2011
 ///////////////////////////////////////////////////////////////////////
 class c_IMPLEMENT_CLASS cImplementBase
-: virtual public cInterfaceBase
 {
 public:
-    typedef cInterfaceBase cImplements;
 #else // !defined(CIMPLEMENTBASE_MEMBERS_ONLY) 
 #endif // !defined(CIMPLEMENTBASE_MEMBERS_ONLY) 
 

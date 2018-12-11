@@ -106,6 +106,39 @@ public:
         return type;
     }
     ///////////////////////////////////////////////////////////////////////
+    //  Function: GetContentTypeText
+    //
+    //    Author: $author$
+    //      Date: 12/8/2018
+    ///////////////////////////////////////////////////////////////////////
+    virtual cString GetContentTypeText() const
+    {
+        cString type(m_cgiMain.GetContentTypeText());
+        return type;
+    }
+    ///////////////////////////////////////////////////////////////////////
+    //  Function: GetContentTypeHtml
+    //
+    //    Author: $author$
+    //      Date: 12/8/2018
+    ///////////////////////////////////////////////////////////////////////
+    virtual cString GetContentTypeHtml() const
+    {
+        cString type(m_cgiMain.GetContentTypeHtml());
+        return type;
+    }
+    ///////////////////////////////////////////////////////////////////////
+    //  Function: GetContentTypeXml
+    //
+    //    Author: $author$
+    //      Date: 12/8/2018
+    ///////////////////////////////////////////////////////////////////////
+    virtual cString GetContentTypeXml() const
+    {
+        cString type(m_cgiMain.GetContentTypeXml());
+        return type;
+    }
+    ///////////////////////////////////////////////////////////////////////
     //  Function: Write
     //
     //    Author: $author$

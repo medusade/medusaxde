@@ -26,8 +26,11 @@
 #include "cplatform.h"
 
 #if !defined(CCGIENV_EXPORT)
+#if !defined(CCGIENV_NO_EXPORT)
 #define CCGIENV_EXPORT c_IMPORT
-#else // !defined(CCGIENV_EXPORT)
+#else // !defined(CCGIENV_NO_EXPORT)
+#define CCGIENV_EXPORT
+#endif // !defined(CCGIENV_NO_EXPORT)
 #endif // !defined(CCGIENV_EXPORT)
 
 #define c_CGI_ENV_NAME_GATEWAY_INTERFACE "GATEWAY_INTERFACE"

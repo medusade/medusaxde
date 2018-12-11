@@ -46,6 +46,7 @@ public:
 #if !defined(CBASE_MEMBERS_ONLY)
 };
 
+
 #if defined(c_NAMESPACE)
 }
 #endif // defined(c_NAMESPACE) 
